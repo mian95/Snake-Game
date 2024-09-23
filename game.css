@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-image: url("https://w0.peakpx.com/wallpaper/67/891/HD-wallpaper-classic-snake-adventures-snake-game.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Abel", sans-serif;
+
+
+}
+
+.box {
+    background: transparent;
+    width: 92vmin;
+    backdrop-filter: blur(3px);
+    height: 90vmin;
+    border: .5px solid #4c7766a0;
+    box-shadow: 0 0 15px #4c7766;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+.details {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    font-size: 25px;
+    right: 100px;
+}
+
+.restart {
+    width: 100px;
+    height: 40px;
+    color: #4c7766;
+    background-color: #ebe6e0;
+    outline: none;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.367);
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    transition: all 0.3s ease-in;
+}
+
+.restart:hover {
+    background-color: #4c7766;
+    color: #ebe6e0;
+    transform: scale(1.09);
+}
+
+.food {
+    border-radius: 8px;
+    border: .5px solid burlywood;
+    /* background-repeat: no-repeat; */
+    background-image: url("https://cdn3d.iconscout.com/3d/premium/thumb/burger-emoji-5993026-4985359.png");
+    background-size: cover;
+
+}
+
+.snake {
+    background: green;
+    border-radius: 40%;
+    transform: scale(0.8);
+}
+
+.snakeHead {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+    transform: scale(1.1);
+    background-image: url("https://play-lh.googleusercontent.com/TUtOJfxHm78ggM9Ssl2iAO2sDXeJ5rYauo_TTc9SiUsscHppl_TydsCwDoyZhfDv5qM");
+    transform: rotate(180deg);
+}
+
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, blue, pink);
+}
+
+.popup #message {
+    font-size: 8rem;
+    color:white;
+}
+
+.popup #new-game {
+    background: #000;
+    color: white;
+    padding: 1rem;
+    border-radius: .25rem;
+    border: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
